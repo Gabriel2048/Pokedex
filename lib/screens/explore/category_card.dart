@@ -7,6 +7,8 @@ class CategoryCard extends StatelessWidget {
   const CategoryCard({required this.title, required this.color, Key? key})
       : super(key: key);
 
+  static final _borderRadius = BorderRadius.circular(20);
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -14,18 +16,22 @@ class CategoryCard extends StatelessWidget {
       shadowColor: color,
       elevation: 7,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: _borderRadius,
       ),
-      child: Align(
-        alignment: Alignment.centerLeft,
-        child: Padding(
-          padding: const EdgeInsets.only(left: 10),
-          child: Text(
-            title,
-            style: GoogleFonts.ubuntu(
-                textStyle: Theme.of(context).textTheme.titleSmall,
-                fontWeight: FontWeight.bold,
-                color: Colors.white),
+      child: InkWell(
+        onTap: () {},
+        borderRadius: _borderRadius,
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 10),
+            child: Text(
+              title,
+              style: GoogleFonts.ubuntu(
+                  textStyle: Theme.of(context).textTheme.titleSmall,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
+            ),
           ),
         ),
       ),
