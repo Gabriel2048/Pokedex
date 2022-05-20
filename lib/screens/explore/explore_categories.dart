@@ -9,6 +9,7 @@ class ExploreCategories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
+      physics: const NeverScrollableScrollPhysics(),
       crossAxisCount: 2,
       mainAxisSpacing: 3,
       crossAxisSpacing: 10,
