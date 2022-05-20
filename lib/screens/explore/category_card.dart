@@ -3,8 +3,13 @@ import 'package:google_fonts/google_fonts.dart';
 
 class CategoryCard extends StatelessWidget {
   final String title;
+  final String? onTapNavigationPath;
   final Color? color;
-  const CategoryCard({required this.title, required this.color, Key? key})
+  const CategoryCard(
+      {required this.title,
+      required this.color,
+      this.onTapNavigationPath,
+      Key? key})
       : super(key: key);
 
   static final _borderRadius = BorderRadius.circular(20);
@@ -19,7 +24,11 @@ class CategoryCard extends StatelessWidget {
         borderRadius: _borderRadius,
       ),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          if (onTapNavigationPath != null) {
+            Navigator.pushNamed(context, onTapNavigationPath ?? '');
+          }
+        },
         borderRadius: _borderRadius,
         child: Align(
           alignment: Alignment.centerLeft,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokedex/screens/categories/pokedex/pokedex_screen.dart';
 import 'package:pokedex/screens/explore/explore_screen.dart';
 
 void main() {
@@ -16,6 +17,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const ExploreScreen(),
+      routes: {
+        PokedexScreen.route: (context) => const PokedexScreen(),
+      },
       debugShowCheckedModeBanner: false,
     );
   }
