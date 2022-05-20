@@ -27,7 +27,7 @@ class ExploreScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    'What pokem are you looking for?',
+                    'What pokemon are you looking for?',
                     style: GoogleFonts.ubuntu(
                         textStyle: Theme.of(context).textTheme.displaySmall,
                         fontWeight: FontWeight.bold),
