@@ -10,9 +10,9 @@ class ExploreCategories extends StatelessWidget {
     return GridView.count(
       crossAxisCount: 2,
       mainAxisSpacing: 3,
-      physics: const BouncingScrollPhysics(),
       crossAxisSpacing: 10,
       childAspectRatio: 21 / 10,
+      physics: const BouncingScrollPhysics(),
       children: const [
         CategoryCard(
           title: 'Pokedex',
