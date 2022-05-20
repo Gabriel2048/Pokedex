@@ -15,12 +15,12 @@ class ExploreCategories extends StatelessWidget {
       crossAxisSpacing: 10,
       childAspectRatio: 21 / 10,
       children: const [
-        CategoryCard(title: 'Pokedex'),
-        CategoryCard(title: 'Moves'),
-        CategoryCard(title: 'Abilities'),
-        CategoryCard(title: 'Items'),
-        CategoryCard(title: 'Locations'),
-        CategoryCard(title: 'Type Charts'),
+        CategoryCard(title: 'Pokedex', color: Color.fromARGB(255, 90, 225, 100)),
+        CategoryCard(title: 'Moves', color: Color.fromARGB(255, 255, 45, 62)),
+        CategoryCard(title: 'Abilities', color: Color.fromARGB(255, 64, 166, 250)),
+        CategoryCard(title: 'Items', color: Color.fromARGB(255, 223, 203, 29)),
+        CategoryCard(title: 'Locations', color: Colors.purple),
+        CategoryCard(title: 'Type Charts', color: Colors.brown),
       ],
     );
   }
