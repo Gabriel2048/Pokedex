@@ -12,7 +12,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  analyze:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,9 +28,8 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      # Consider passing '--fatal-infos' for slightly stricter analysis.
-      - name: Analyze project source
-        run: dart analyze
+      - name: Analyze source code
+        run: dart analyze --fatal-infos
 
       # Your project will need to have tests in test/ and a dependency on
       # package:test for this step to succeed. Note that Flutter projects will
