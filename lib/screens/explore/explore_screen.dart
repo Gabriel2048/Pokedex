@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pokedex/screens/explore/explore_categories.dart';
 import 'package:pokedex/screens/explore/search_box.dart';
 
 class ExploreScreen extends StatelessWidget {
@@ -33,7 +34,11 @@ class ExploreScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 20),
-                  const SearchBox()
+                  const SearchBox(),
+                  const SizedBox(height: 30),
+                  const Expanded(
+                    child: ExploreCategories(),
+                  ),
                 ],
               ),
             ),
